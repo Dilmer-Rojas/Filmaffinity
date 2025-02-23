@@ -2,10 +2,10 @@ import os
 import pandas as pd
 
 # 📂 Directorio donde están los archivos .xlsx
-carpeta = "./data/tablas"  # Cambia esto a la ruta donde están los archivos
+carpeta = "../data/processed/"  # Cambia esto a la ruta donde están los archivos
 
 # 📌 Crear un objeto de Excel
-ruta_salida = "./data/archivo_final.xlsx"
+ruta_salida = "../outputs/archivo_final.xlsx"
 with pd.ExcelWriter(ruta_salida, engine="openpyxl") as writer:
     # 📌 Recorremos los archivos en la carpeta
     for archivo in os.listdir(carpeta):
